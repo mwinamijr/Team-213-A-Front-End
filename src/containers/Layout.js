@@ -8,6 +8,9 @@ class Layout extends React.Component {
       return (
         <div>
             <Navbar />
+            <div>
+              {this.props.children}
+            </div>
             <Footer />
         </div>
         );
