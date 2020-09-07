@@ -1,9 +1,22 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
+
+import HistoryList from '../components/HistoryList';
 
 class History extends Component {
     state = {
         history: []
+    }
+
+    componentDidMount() {
+      axios.get('http://127.0.0.1:8000/api/patientHistory/')
+      .then(res => {
+        this.setState({
+          history: res.data
+        });
+        console.log(res.data)
+      })
     }
 
     render() {
@@ -19,24 +32,8 @@ class History extends Component {
               </tr>
             </MDBTableHead>
             <MDBTableBody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
+              <HistoryList />
+              <HistoryList />
             </MDBTableBody>
           </MDBTable>
         </div>
