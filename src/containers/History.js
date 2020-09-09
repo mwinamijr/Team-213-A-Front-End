@@ -15,7 +15,6 @@ class History extends Component {
         this.setState({
           history: res.data
         });
-        console.log(res.data)
       })
     }
 
@@ -32,8 +31,8 @@ class History extends Component {
               </tr>
             </MDBTableHead>
             <MDBTableBody>
-              <HistoryList />
-              <HistoryList />
+              <HistoryList data={this.state.history} />
+              
             </MDBTableBody>
           </MDBTable>
         </div>
