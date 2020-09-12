@@ -6,14 +6,14 @@ import HistoryList from '../components/HistoryList';
 
 class History extends Component {
     state = {
-        history: []
+        histories: []
     }
 
     componentDidMount() {
       axios.get('http://127.0.0.1:8000/api/patientHistory/')
       .then(res => {
         this.setState({
-          history: res.data
+          histories: res.data
         });
       })
     }
@@ -31,7 +31,7 @@ class History extends Component {
               </tr>
             </MDBTableHead>
             <MDBTableBody>
-              <HistoryList data={this.state.history} />
+              <HistoryList data={this.state.histories} />
               
             </MDBTableBody>
           </MDBTable>
