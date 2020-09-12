@@ -11,7 +11,7 @@ class HistoryDetail extends Component {
 
     componentDidMount() {
         const historyID = this.props.match.params.historyID;
-      axios.get(`http://127.0.0.1:8000/api/patientHistory/${historyID}`)
+      axios.get(`http://127.0.0.1:8000/api/${historyID}`)
       .then(res => {
         this.setState({
           history: res.data
@@ -29,14 +29,14 @@ class HistoryDetail extends Component {
             <MDBCardBody>
             <MDBCardTitle>Patient Information</MDBCardTitle>
               <MDBInputGroup
-                material containerClassName="mb-2 mt-0" prepend="Name"
+                material containerClassName="mb-2 mt-0" prepend="Name" value={this.state.history.name}
               />
               <MDBInputGroup
-                material containerClassName="mb-2 mt-0" prepend="Address"
+                material containerClassName="mb-2 mt-0" prepend="Address" value={this.state.history.address}
               />
               <MDBInputGroup
                 material conta
-                inerClassName="mb-2 mt-0" prepend="Age"
+                inerClassName="mb-2 mt-0" prepend="Age" value={this.state.history.age}
               />
               </MDBCardBody>
             </MDBCard>
@@ -54,16 +54,24 @@ class HistoryDetail extends Component {
                     </MDBTableHead>
                     <MDBTableBody>
                       <tr>
-                        <td>1</td>
-                        <td>Mark</td>
+                        <td>Presenting illness history</td>
+                        <td>{this.state.history.history_of_presenting_illness}</td>
                       </tr>
                       <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
+                        <td>Medication History</td>
+                        <td>{this.state.history.medication_history}</td>
                       </tr>
                       <tr>
-                        <td>3</td>
-                        <td>Larry</td>
+                        <td>Past Medical History</td>
+                        <td>{this.state.history.past_medical_history}</td>
+                      </tr>
+                      <tr>
+                        <td>Family History</td>
+                        <td>{this.state.history.family_history}</td>
+                      </tr>
+                      <tr>
+                        <td>Social History</td>
+                        <td>{this.state.history.social_history}</td>
                       </tr>
                     </MDBTableBody>
                   </MDBTable>
