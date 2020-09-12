@@ -16,7 +16,6 @@ class HistoryDetail extends Component {
         this.setState({
           history: res.data
         });
-        console.log(res.data)
       })
     }
 
