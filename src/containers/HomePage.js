@@ -88,12 +88,11 @@ const HomePage = () => {
           <MDBCol lg="7">
             <a href="#!" className="green-text">
               <h6 className="font-weight-bold mb-3">
-                <MDBIcon icon="utensils" className="pr-2" />
-                Food
+                Services
               </h6>
             </a>
             <h3 className="font-weight-bold mb-3 p-0">
-              <strong>Title of the news</strong>
+              <strong>Services available</strong>
             </h3>
             <p>
               Nam libero tempore, cum soluta nobis est eligendi optio cumque
@@ -101,13 +100,7 @@ const HomePage = () => {
               omnis voluptas assumenda est, omnis dolor repellendus et aut
               officiis debitis.
             </p>
-            <p>
-              by
-              <a href="#!">
-                <strong>Carine Fox</strong>
-              </a>
-              , 19/08/2018
-            </p>
+            
             <MDBBtn color="success" size="md" className="waves-light ">
               Read more
             </MDBBtn>
@@ -118,12 +111,11 @@ const HomePage = () => {
           <MDBCol lg="7">
             <a href="#!" className="pink-text">
               <h6 className="font-weight-bold mb-3">
-                <MDBIcon icon="image" className="pr-2" />
-                Lifestyle
+                Our staff
               </h6>
             </a>
             <h3 className="font-weight-bold mb-3 p-0">
-              <strong>Title of the news</strong>
+              <strong>Get to know or employees</strong>
             </h3>
             <p>
               At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -131,13 +123,7 @@ const HomePage = () => {
               dolores et quas molestias excepturi sint occaecati cupiditate
               non provident.
             </p>
-            <p>
-              by
-              <a href="#!">
-                <strong>Carine Fox</strong>
-              </a>
-              , 14/08/2018
-            </p>
+            
             <MDBBtn
               color="pink"
               size="md"
@@ -176,25 +162,17 @@ const HomePage = () => {
           <MDBCol lg="7">
             <a href="#!" className="indigo-text">
               <h6 className="font-weight-bold mb-3">
-                <MDBIcon icon="suitcase" className="pr-2" />
-                Food
+                Treatments
               </h6>
             </a>
             <h3 className="font-weight-bold mb-3 p-0">
-              <strong>Title of the news</strong>
+              <strong>Get extra treatment</strong>
             </h3>
             <p>
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
               aut fugit, sed quia consequuntur magni dolores eos qui ratione
               voluptatem sequi nesciunt. Neque porro qui dolorem ipsum quia
               sit amet.
-            </p>
-            <p>
-              by
-              <a href="#!">
-                <strong>Carine Fox</strong>
-              </a>
-              , 11/08/2018
             </p>
             <MDBBtn color="indigo" size="md" className="waves-light ">
               Read more
