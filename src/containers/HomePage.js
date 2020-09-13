@@ -1,5 +1,5 @@
 import React from "react";
-import {  MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBIcon, MDBView, MDBBtn,
+import {  MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBView, MDBBtn,
   MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBContainer
 } from "mdbreact";
 
