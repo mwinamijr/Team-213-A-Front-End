@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 import { MDBContainer } from "mdbreact";
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 class Layout extends React.Component {
     render() {

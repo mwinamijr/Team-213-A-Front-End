@@ -2,7 +2,7 @@ import React, {Fragment} from "react";
 import { Link } from "react-router-dom";
 
 const HistoryList = (props) => {
-  const histories = props.data
+  const histories = props.data;
   const historyList = histories.map((history) =>
     <Fragment key={history.id.toString()}>
       <tr>
@@ -20,6 +20,6 @@ const HistoryList = (props) => {
     return(
     <Fragment>{historyList}</Fragment>
         
-    )
-} 
+    );
+} ;
 export default HistoryList;

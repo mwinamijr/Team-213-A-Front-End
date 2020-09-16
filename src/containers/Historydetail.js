@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, 
   MDBInputGroup, MDBContainer, MDBTable, MDBTableBody, MDBTableHead 
 } from "mdbreact";
@@ -12,11 +12,11 @@ class HistoryDetail extends Component {
     componentDidMount() {
         const historyID = this.props.match.params.historyID;
       axios.get(`http://127.0.0.1:8000/api/${historyID}`)
-      .then(res => {
+      .then((res) => {
         this.setState({
           history: res.data
         });
-      })
+      });
     }
 
     render() {

@@ -33,6 +33,6 @@ const Footer = () => {
       </div>
     </MDBFooter>
   );
-}
+};
 
 export default Footer;

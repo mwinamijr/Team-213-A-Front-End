@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-import { MDBTable, MDBTableBody, MDBTableHead, MDBBtn } from 'mdbreact';
+import React, { Component, Fragment } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import { MDBTable, MDBTableBody, MDBTableHead, MDBBtn } from "mdbreact";
 
-import HistoryList from '../components/HistoryList';
+import HistoryList from "../components/HistoryList";
 
 class History extends Component {
     state = {
@@ -11,12 +11,12 @@ class History extends Component {
     }
 
     componentDidMount() {
-      axios.get('http://127.0.0.1:8000/api/')
-      .then(res => {
+      axios.get("http://127.0.0.1:8000/api/")
+      .then((res) => {
         this.setState({
           histories: res.data
         });
-      })
+      });
     }
 
     render() {

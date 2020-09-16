@@ -182,6 +182,6 @@ const HomePage = () => {
       </MDBCardBody>
     </MDBCard>
   );
-}
+};
 
 export default HomePage;

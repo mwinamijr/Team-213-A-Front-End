@@ -1,10 +1,10 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
 
 const HistoryForm = () => {
 
     const handleSubmit = (event) => {
-        event.preventDefault()
+        event.preventDefault();
         const name = event.target.elements.name.value;
         const address = event.target.elements.address.value;
         const age = event.target.elements.age.value;
@@ -13,8 +13,8 @@ const HistoryForm = () => {
         const pastHistory = event.target.elements.pastHistory.value;
         const familyHistory = event.target.elements.familyHistory.value;
         const socialHistory = event.target.elements.socialHistory.value;
-        console.log(name, address)
-    }
+    };
+    
 return (
 <MDBContainer>
   <MDBRow>
