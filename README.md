@@ -9,21 +9,21 @@ all prerequisites
 change directory to frontend
 
 run te folowing command
-```
+
 npm install
-```
+
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [React](https://reactjs.org/) - The web framework used
-* [MdBootsrap](https://mdbootstrap.com/) - The frontend library
+  * [React](https://reactjs.org/) - The web framework used
+  * [MdBootsrap](https://mdbootstrap.com/) - The frontend library
 
 ## Authors
 
-* **Athumani Mwinami** - *Initial work* - [mwinamijr](https://github.com/mwinamijr)
+  * **Athumani Mwinami** - *Initial work* - [mwinamijr](https://github.com/mwinamijr)
 
 See also the list of [contributors](https://github.com/mwinamijr/Team-213-A-Front-End/contributors) who participated in this project.
 
