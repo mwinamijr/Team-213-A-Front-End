@@ -1,10 +1,10 @@
-import React from 'react';
-import {Route} from 'react-router-dom';
+import React from "react";
+import {Route} from "react-router-dom";
 
-import History from './containers/History';
-import HomePage from './containers/HomePage';
-import HistoryDetail from './containers/Historydetail';
-import HistoryForm from './components/HistoryForm';
+import History from "./containers/History";
+import HomePage from "./containers/HomePage";
+import HistoryDetail from "./containers/Historydetail";
+import HistoryForm from "./components/HistoryForm";
 
 const BaseRouter = () => {
     return(
@@ -15,7 +15,7 @@ const BaseRouter = () => {
             <Route exact path='/addHistory' component={HistoryForm} />
 
         </div>
-    )
-}
+    );
+};
 
 export default BaseRouter;
