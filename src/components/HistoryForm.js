@@ -2,7 +2,7 @@ import React from "react";
 import axios from "axios";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
 
-const HistoryForm = (props) => {
+const HistoryForm = () => {
 
     const handleSubmit = (event, requestType, historyID) => {
         event.preventDefault();

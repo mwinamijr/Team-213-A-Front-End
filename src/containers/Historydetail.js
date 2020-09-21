@@ -19,6 +19,11 @@ class HistoryDetail extends Component {
       });
     }
 
+    handleDelete = (event) => {
+      const historyID = this.props.match.params.historyID;
+      axios.delete(`http://127.0.0.1:8000/api/${historyID}/`)
+    }
+
     render() {
         return (
         <div>
@@ -75,9 +80,11 @@ class HistoryDetail extends Component {
                     </MDBTableBody>
                   </MDBTable>
                 </MDBCardText>
-                <MDBBtn color="primary">go somewhere</MDBBtn>
               </MDBCardBody>
             </MDBCard>
+            <form type="submit" onSubmit={this.handleDelete}>
+            <MDBBtn color="danger">Delete</MDBBtn>
+            </form>
           </MDBContainer>
         </div>
         );

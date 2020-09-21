@@ -12,7 +12,6 @@ const HistoryList = (props) => {
       <td>
         <Link to={`/history/${history.id}`} ><span className='ml-3'><i className="far fa-eye"></i></span></Link>
         <span className='ml-3'><i className="fas fa-pencil-alt"></i></span>
-        <span className='ml-3'><i className="fas fa-times-circle"></i></span>
       </td>
       </tr>
     </Fragment>
