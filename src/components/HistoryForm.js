@@ -13,6 +13,7 @@ const HistoryForm = () => {
         const pastHistory = event.target.elements.pastHistory.value;
         const familyHistory = event.target.elements.familyHistory.value;
         const socialHistory = event.target.elements.socialHistory.value;
+        console.log(name, address, age)
     };
     
 return (
@@ -43,7 +44,7 @@ return (
          
         </div>
         <div className="text-center">
-          <MDBBtn outline color="primary" htmlType='submit'>
+          <MDBBtn outline color="primary" type='submit'>
             Submit
           </MDBBtn>
         </div>
