@@ -11,7 +11,7 @@ class HistoryDetail extends Component {
 
     componentDidMount() {
         const historyID = this.props.match.params.historyID;
-      axios.get(`http://127.0.0.1:8000/api/${historyID}`)
+      axios.get(`http://127.0.0.1:8000/api/${historyID}/`)
       .then((res) => {
         this.setState({
           history: res.data

@@ -1,9 +1,10 @@
 import React from "react";
+import axios from "axios";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
 
-const HistoryForm = () => {
+const HistoryForm = (props) => {
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event, requestType, historyID) => {
         event.preventDefault();
         const name = event.target.elements.name.value;
         const address = event.target.elements.address.value;
@@ -13,14 +14,36 @@ const HistoryForm = () => {
         const pastHistory = event.target.elements.pastHistory.value;
         const familyHistory = event.target.elements.familyHistory.value;
         const socialHistory = event.target.elements.socialHistory.value;
-        console.log(name, address, age)
+
+        switch (requestType) {
+          case "post":
+            axios.post("http://127.0.0.1:8000/api/", {
+              name: name, address: address, age: age, presentHistory: presentHistory,
+              medicationHistory: medicationHistory, pastHistory: pastHistory,
+              familyHistory: familyHistory, socialHistory: socialHistory
+            })
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+            break;
+          case "put":
+            axios.put(`http://127.0.0.1:8000/api/${historyID}/`, {
+              name: name, address: address, age: age, presentHistory: presentHistory,
+              medicationHistory: medicationHistory, pastHistory: pastHistory,
+              familyHistory: familyHistory, socialHistory: socialHistory
+            })
+            .then(res => console.log(res))
+            .catch(err => console.err(err))
+            break;
+          default:
+            break;
+        }
     };
     
 return (
 <MDBContainer>
   <MDBRow>
     <MDBCol md="12">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={(event) => handleSubmit(event, "post", null)}>
           <br />
         <p className="h5 text-center mb-4">Add new patient history</p>
         <div className="grey-text">
